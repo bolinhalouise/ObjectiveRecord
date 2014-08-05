@@ -395,7 +395,7 @@
     static dispatch_once_t singletonToken;
     dispatch_once(&singletonToken, ^{
         sharedFormatter = [[NSDateFormatter alloc] init];
-        [sharedFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss z"];
+        [sharedFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"];
     });
 
     return sharedFormatter;
